@@ -25,9 +25,9 @@ function calculateMul(counter){
 
 function handleFirstRequest(req,res){
     console.log(req.body);
-    //var counter = req.query.counterValue;  //sending data from data
+    var counter = req.query.counter;  //sending data from data
     //var counter = req.headers.counters;    //sending data from headers   
-    var counter = req.body.counters;
+    //var counter = req.body.counters;
     
     
         var calculatedsum = calculateSum(counter);
@@ -41,7 +41,7 @@ function handleFirstRequest(req,res){
 }
  
 //app.get('/', handleFirstRequest);
-app.post('/', handleFirstRequest);
+app.get('/', handleFirstRequest);
 
 function started(){
     console.log(`Example app listening on port ${port}`)
